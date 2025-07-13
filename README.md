@@ -136,3 +136,7 @@ public class Pedido
 - O serviço e o cliente funcionam localmente via SOAP.
 - Tipos complexos como listas e objetos aninhados foram utilizados.
 - Todas as funcionalidades foram testadas com sucesso.
+
+## Aplicação desenvolvida por:
+
+- Arthur Soares Amorelli Dias
