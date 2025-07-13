@@ -60,7 +60,7 @@ public class Pedido
   Busca um pedido pelo seu ID.
 
 - **AtualizarPedido(Pedido pedido)**  
-  Atualiza os dados de um pedido (cliente, produtos, status).
+  Atualiza os dados de um pedido (cliente, produtos, preço, status).
 
 - **AtualizarStatus(int id, string novoStatus)**  
   Atualiza somente o status do pedido.
