@@ -137,6 +137,6 @@ public class Pedido
 - Tipos complexos como listas e objetos aninhados foram utilizados.
 - Todas as funcionalidades foram testadas com sucesso.
 
-## Aplicação desenvolvida por:
+### Aplicação desenvolvida por:
 
 - Arthur Soares Amorelli Dias
