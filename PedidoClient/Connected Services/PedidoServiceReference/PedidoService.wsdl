@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="PedidoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:64811/PedidoService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:64811/PedidoService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:64811/PedidoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PedidoService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPedidoService_CriarPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:CriarPedido" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoService_CriarPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CriarPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoService_ListarPedidos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPedidos" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoService_ListarPedidos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPedidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoService_BuscarPedidoPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPedidoPorId" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoService_BuscarPedidoPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPedidoPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoService_AtualizarPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarPedido" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoService_AtualizarPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoService_AtualizarStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarStatus" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoService_AtualizarStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoService_ExcluirPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirPedido" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoService_ExcluirPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirPedidoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPedidoService">
+    <wsdl:operation name="CriarPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoService/CriarPedido" message="tns:IPedidoService_CriarPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoService/CriarPedidoResponse" message="tns:IPedidoService_CriarPedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarPedidos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoService/ListarPedidos" message="tns:IPedidoService_ListarPedidos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoService/ListarPedidosResponse" message="tns:IPedidoService_ListarPedidos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPedidoPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoService/BuscarPedidoPorId" message="tns:IPedidoService_BuscarPedidoPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoService/BuscarPedidoPorIdResponse" message="tns:IPedidoService_BuscarPedidoPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoService/AtualizarPedido" message="tns:IPedidoService_AtualizarPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoService/AtualizarPedidoResponse" message="tns:IPedidoService_AtualizarPedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoService/AtualizarStatus" message="tns:IPedidoService_AtualizarStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoService/AtualizarStatusResponse" message="tns:IPedidoService_AtualizarStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoService/ExcluirPedido" message="tns:IPedidoService_ExcluirPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoService/ExcluirPedidoResponse" message="tns:IPedidoService_ExcluirPedido_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPedidoService" type="tns:IPedidoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CriarPedido">
+      <soap:operation soapAction="http://tempuri.org/IPedidoService/CriarPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarPedidos">
+      <soap:operation soapAction="http://tempuri.org/IPedidoService/ListarPedidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPedidoPorId">
+      <soap:operation soapAction="http://tempuri.org/IPedidoService/BuscarPedidoPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarPedido">
+      <soap:operation soapAction="http://tempuri.org/IPedidoService/AtualizarPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarStatus">
+      <soap:operation soapAction="http://tempuri.org/IPedidoService/AtualizarStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirPedido">
+      <soap:operation soapAction="http://tempuri.org/IPedidoService/ExcluirPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PedidoService">
+    <wsdl:port name="BasicHttpBinding_IPedidoService" binding="tns:BasicHttpBinding_IPedidoService">
+      <soap:address location="http://localhost:64811/PedidoService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
